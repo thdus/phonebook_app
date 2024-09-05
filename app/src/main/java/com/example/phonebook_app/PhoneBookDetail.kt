@@ -5,8 +5,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class PhoneBookDetail :AppCompatActivity(){
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_book_detail)
 
         val name: String = intent.extras?.getString("name") ?: ""

@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Phonebook_app"
         tools:targetApi="31">
+        <activity android:name=".PhoneBookDetail"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

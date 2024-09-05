@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        val container = findViewById<LinearLayout>(R.id.container)
+        val container = findViewById<LinearLayoutCompat>(R.id.container)
         val inflater = LayoutInflater.from(this)
         phonebookList.forEach{
             phoneBook ->
@@ -40,16 +41,11 @@ class MainActivity : AppCompatActivity() {
 
             phonebookItem.setOnClickListener {
                 startActivity(
-                    Intent(this, PhoneBookDetailActivity::class.java).apply {
+                    Intent(this, PhoneBookDetail::class.java).apply {
                         this.putExtra("name", phoneBook.name)
                         this.putExtra("number", phoneBook.number)
                     }
                 )
-            }
-            image.setOnClickListener {
-
-            }name.setOnClickListener{
-
             }
         }
 
